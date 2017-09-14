@@ -76,8 +76,8 @@ ifeq ($(TARGET_BOARD_PLATFORM),exynos4)
 LOCAL_CFLAGS += -DUSE_MFC5X_ALIGNMENT
 endif
 
-LOCAL_SHARED_LIBRARIES := libhardware liblog
-LOCAL_STATIC_LIBRARIES := liblog libcutils libExynosVideoApi
+LOCAL_SHARED_LIBRARIES := libhardware
+LOCAL_STATIC_LIBRARIES := liblog libcutils libarect libExynosVideoApi
 
 LOCAL_C_INCLUDES := \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
