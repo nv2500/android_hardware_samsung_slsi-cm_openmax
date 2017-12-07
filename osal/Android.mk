@@ -76,7 +76,7 @@ ifeq ($(TARGET_BOARD_PLATFORM),exynos4)
 LOCAL_CFLAGS += -DUSE_MFC5X_ALIGNMENT
 endif
 
-LOCAL_SHARED_LIBRARIES := libhardware
+LOCAL_SHARED_LIBRARIES := libhardware libvirtualdisplay
 LOCAL_STATIC_LIBRARIES := liblog libcutils libarect libExynosVideoApi
 
 LOCAL_C_INCLUDES := \
@@ -90,7 +90,9 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/hardware/samsung_slsi-cm/exynos/include \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_BOARD_PLATFORM)/include \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/include \
-	$(TOP)/frameworks/native/libs/arect/include
+	$(TOP)/frameworks/native/libs/arect/include \
+	$(TOP)/frameworks/native/libs/nativebase/include \
+	$(TOP)/frameworks/native/libs/nativewindow/include
 
 LOCAL_ADDITIONAL_DEPENDENCIES += \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
